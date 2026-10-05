@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div>
+      <h1>Contact Management System</h1>
+      <p>Manage your personal and professional contacts</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="form-card">
+      <h2 id="formTitle">Add New Contact</h2>
+
+      <form id="contactForm">
+
+        <input type="hidden" id="editingId">
+
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label for="contactId">Contact ID</label>
+            <input
+              type="text"
+              id="contactId"
+              placeholder="Example: C001"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter full name"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input
+              type="text"
+              id="phone"
+              placeholder="10-digit phone number"
+              maxlength="10"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="example@gmail.com"
+              required
+            >
+          </div>
+
+        </div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-btn" id="submitBtn">
+            Add Contact
+          </button>
+
+          <button
+            type="button"
+            class="secondary-btn"
+            id="cancelBtn"
+            style="display: none;"
+          >
+            Cancel Edit
+          </button>
+        </div>
+
+      </form>
+
+      <div id="message"></div>
+    </section>
+
+    <section class="contacts-section">
+
+      <div class="section-header">
+        <div>
+          <h2>My Contacts</h2>
+          <p id="contactCount">0 contacts</p>
+        </div>
+
+        <button class="refresh-btn" onclick="loadContacts()">
+          Refresh
+        </button>
+      </div>
+
+      <div id="loading" class="loading">
+        Loading contacts...
+      </div>
+
+      <div id="emptyState" class="empty-state">
+        No contacts found. Add your first contact above.
+      </div>
+
+      <div id="contactsContainer" class="contacts-grid"></div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Contact Management System | Node.js • Express.js • MongoDB • Mongoose</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
