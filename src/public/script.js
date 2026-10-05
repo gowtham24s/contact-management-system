@@ -1,4 +1,4 @@
-const API_URL = "/contacts";
+const API_URL = "contacts";
 
 const contactForm = document.getElementById("contactForm");
 const contactIdInput = document.getElementById("contactId");
