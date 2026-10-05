@@ -1,35 +1,54 @@
-NodeJS + Express
-======================
-This is a simple NodeJS + Express application. This application serves as a basic template for a web server using NodeJS for the backend, Express as the web application framework.
+# Contact Management System
 
-What does this application do?
--------------------------------
-This application serves a simple web server that listens on defined port, default: `3000`.
+A Contact Management System built using Node.js, Express.js, MongoDB, and Mongoose. The application provides CRUD operations to manage personal and professional contacts.
 
+## Technologies Used
 
-# How to run?
-You can run the application in one of the following ways:
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+- dotenv
+- Nodemon
+- HTML
+- CSS
+- JavaScript
 
-1. Press `F5`. This will start the application in debug mode.
+## Features
 
-2. Open a terminal by going to 'View' -> 'Terminal'. Then run: 
-    > `npm run dev`
+- Add a new contact
+- View all contacts
+- View a contact by ID
+- Update contact details
+- Delete a contact
+- Validate phone numbers
+- Validate email addresses
+- Unique contact ID
+- Unique email address
+- Error handling
+- User-friendly web interface
 
-This will start the application in development mode.
+## Project Structure
 
-
-Via curl command:
------------------
-1. Open a terminal.
-2. Type the following command: 
-   > `curl http://localhost:3000`
-3. Press 'Enter' to make the request.
-
-Via Thunder Client:
--------------------
-1. Click on the Thunder Client icon on the activity bar on the side. If you can't find it, you can search for 'Thunder Client' in the 'View' -> 'Extensions' menu.
-2. Once Thunder Client is open, click on 'New Request'.
-3. In the 'Request URL' field, enter the URL of your application (e.g., http://localhost:3000) and select the HTTP method from the dropdown menu.
-5. Click on 'Send' to make the request.
-
-Happy coding! 🙂
+```text
+my-project/
+│
+├── src/
+│   ├── models/
+│   │   └── Contact.js
+│   │
+│   ├── routes/
+│   │   └── contactRoutes.js
+│   │
+│   ├── public/
+│   │   ├── index.html
+│   │   ├── style.css
+│   │   └── script.js
+│   │
+│   └── app.js
+│
+├── .gitignore
+├── Dockerfile
+├── package.json
+├── package-lock.json
+└── README.md
